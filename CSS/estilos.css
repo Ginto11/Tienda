@@ -25,6 +25,7 @@ body{
 }
 
 .contenedor__elementos{
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -68,7 +69,7 @@ body{
 	background: #000e;
 }
 
-.lista__carros{
+.lista__elementos{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -82,7 +83,7 @@ body{
 
 .tabla__elementos{
 	border:  2px solid #000;
-	width: 600px;
+	width: 60%;
 	border-radius: 5px;
 	box-shadow: 0 0 5px #000;
 
