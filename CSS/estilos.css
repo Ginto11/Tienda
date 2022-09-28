@@ -1,0 +1,122 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: calibri;
+}
+
+body{
+	background: #efefef;
+}
+
+.titulo__encabezado{
+	display: flex;
+	max-width: 100%;
+	justify-content: center;
+	padding: 30px;
+	background: #00800090;
+	border: 10px solid #000;
+	border-radius: 20px;
+	margin: 30px;
+	box-shadow: 0 0 5px #000;
+}
+
+.contenedor__elementos{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	grid-gap: 30px;
+}
+
+.contenedor__imagen{
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	grid-gap: 20px;
+}
+
+.contenedor__imagen--imagen{
+	width: 100%;
+}
+
+.imagen__carro, .imagen__moto {
+	width: 100%;
+	border-radius: 10px;
+	border: 3px solid #000;
+	box-shadow: 0 0 5px #000;
+	height: 350px;
+}
+
+.contenedor__imagen > input{
+	border: none;
+	border-radius: 4px;
+	height: 40px;
+	font-size: 18px;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+	transition: .3s ease;
+	box-shadow: 0 0 5px #000;	
+}
+
+.contenedor__imagen > input:hover{
+	background: #000e;
+}
+
+.lista__elementos{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 30px;
+}
+
+.lista{
+	display: flex;
+	font-size: 20px;
+}
+
+.tabla__elementos{
+	border:  2px solid #000;
+	width: 80%;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #000;
+
+}
+
+.titulo__tabla{
+	border: 2px solid #000;
+	padding: 0 20px;
+	margin: 10px; 
+	border-radius: 10px;
+	background: #00800090;
+	box-shadow: 0 0 5px #000;
+}
+
+.titulo__encabezado--table{
+	border:  2px solid #000;
+	border-radius: 5px;
+	text-align: center;
+	background: #00800090;
+}
+
+.valor__fila{
+	border-radius: 5px;
+	text-align: center;
+}
+
+.btn__comprar{
+	margin: 15px;
+	width: 100px;
+	height: 30px;
+	border-radius: 10px;
+	outline: none;
+	cursor: pointer;
+	background: #000;
+	color: #fff;
+	border-color: #fff;
+}
+
+.btn__comprar:hover{
+	background: #000e;
+}

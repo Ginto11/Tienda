@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+	<title>Tienda</title>
+</head>
+<body>
+
+	<div id="app">
+
+		<div class="titulo__encabezado">
+			<h1>ELEMENTOS</h1>
+		</div>
+
+		<div class="contenedor__elementos">
+			
+			<div class="contenedor__imagen">
+				<div class="contenedor__imagen--imagen">
+					<img class="imagen__carro" src="img/carro.jpg" alt="">
+				</div>
+				<input v-on:click="mostrarCarros()" type="submit" value="Ver Elementos">
+			</div>
+
+			<div class="contenedor__imagen">
+				<div class="contenedor__imagen--imagen">
+					<img class="imagen__moto" src="img/moto.jpg" alt="">
+				</div>
+				
+				<input v-on:click="mostrarMotos()" type="submit" value="Ver Elementos">
+			</div>
+
+		</div>		
+
+		<div v-if="mostrarListaCarros == true" class="lista__elementos">
+			
+			<h1 class="titulo__tabla">LISTA DE CARROS</h1>
+			<table class="tabla__elementos">
+				<tr>
+					<th class="titulo__encabezado--table">ID</th>
+					<th class="titulo__encabezado--table">MARCA</th>
+					<th class="titulo__encabezado--table">COLOR</th>
+					<th class="titulo__encabezado--table">COSTO</th>
+				</tr>
+
+				<tr v-for="lista of listaCarros">
+					<td class="valor__fila"> {{lista.id}} </td>
+					<td class="valor__fila"> {{lista.marca.toUpperCase()}} </td>
+					<td class="valor__fila"> {{lista.color.toUpperCase()}} </td>
+					<td class="valor__fila"> {{lista.costo}} </td>
+				</tr>
+
+			</table>
+
+			<input v-on:click="comprarCarro()" class="btn__comprar" type="submit" value="Comprar">
+		</div>
+
+
+		<div v-if="mostrarListaMotos == true" class="lista__elementos">
+			
+			<h1 class="titulo__tabla">LISTA DE MOTOS</h1>
+			<table class="tabla__elementos">
+				<tr>
+					<th class="titulo__encabezado--table">ID</th>
+					<th class="titulo__encabezado--table">MARCA</th>
+					<th class="titulo__encabezado--table">COLOR</th>
+					<th class="titulo__encabezado--table">COSTO</th>
+				</tr>
+
+				<tr v-for="lista of listaMotos">
+					<td class="valor__fila"> {{lista.id}} </td>
+					<td class="valor__fila"> {{lista.marca.toUpperCase()}} </td>
+					<td class="valor__fila"> {{lista.color.toUpperCase()}} </td>
+					<td class="valor__fila"> {{lista.costo}} </td>
+				</tr>
+			</table>
+
+			<input v-on:click="comprarMoto()" class="btn__comprar" type="submit" value="Comprar">
+		</div>
+		
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<script src="JS/funcion.js"></script>
+	
+</body>
+</html>
