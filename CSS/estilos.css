@@ -8,6 +8,17 @@ body{
 	background: #efefef;
 }
 
+body::-webkit-scrollbar{
+	width: 5px;
+	background-color: #00800090;
+}
+
+body::-webkit-scrollbar-thumb{
+	width: 5px;
+	background-color: #000;
+	border-radius: 3px;
+}
+
 .titulo__encabezado{
 	display: flex;
 	max-width: 100%;
